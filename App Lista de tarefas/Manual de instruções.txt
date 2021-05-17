@@ -1,0 +1,22 @@
+﻿====================== INSTALAÇÃO DO SISTEMA ======================
+1° Adicionar a pasta (app_lista_tarefas_public no diretorio (C:\xampp\htdocs)
+
+2° Adicionar a pasta (app_lista_tarefas)  dentro da pasta xampp ex: C:\xampp\app_lista_tarefas
+
+3° criando o banco de dados
+====================== CRIAÇÃO DO BANCO DE DADOS========================
+CREATE DATABASE php_com_pdo;
+
+CREATE TABLE tb_status (
+  id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  status varchar(25) NOT NULL
+) 
+
+CREATE TABLE tb_tarefas (
+  id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_status int NOT NULL DEFAULT 1,
+  tarefa text NOT NULL,
+  data_cadastrado datetime NOT NULL DEFAULT current_timestamp()
+) 
+==================== ACESSO AO SISTEMA==============
+1° digite no navegador http://localhost/app_lista_tarefas_public/todas_tarefas.php
